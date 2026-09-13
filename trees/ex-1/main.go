@@ -30,6 +30,7 @@ func addNode(node *Node) {
 		var a int
 		fmt.Scan(&a)
 		node.right = &Node{data: a}
+		
 		addNode(node.right)
 	}
 }
