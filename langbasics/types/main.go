@@ -13,4 +13,16 @@ func main() {
 		fu  pp
 	}
 
+	var c CustomFunc = dataFunc
+	c.AssociatedMethod()
+}
+
+type CustomFunc func(int) int
+
+func (c CustomFunc) AssociatedMethod() {
+	c(10)
+}
+
+func dataFunc(a int) int {
+	return 10
 }
